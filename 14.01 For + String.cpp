@@ -6,6 +6,8 @@
 #include <string>
 #include <array>
 #include <Windows.h>
+#include <vector>
+#include <algorithm>
 using namespace::std;
 
 int main()
@@ -13,7 +15,7 @@ int main()
 	setlocale(LC_ALL, "RU");
 	SetConsoleOutputCP(1251);
 	SetConsoleCP(1251);
-    
+	/* 
 	string str = "";
 	
 	cout << "Вторая программа ДЗ - *Фильтр мата внутри фразы*\n" << endl;
@@ -94,8 +96,69 @@ int main()
 	{
 		cout << "Фу, лох! В твоей фразе -* " << str << " *- даже мата нет!" << endl;
 	}
+	//сортировка символов по тупому функцией членом
+	sort(begin(str), end(str));
+	cout << str;
+
+	*/
+
+	//Задача 3 - вывод простых чисел в диапазоне от 2 до num  
+	cout << "Третья программа ДЗ - *Вывод простых чисел в диапазоне от 2 до num*\n" << endl;
+
+	int num = 0;
+	
+	cout << "Введи число конца диапазона (только положительное!), для опеределения всех простых чисел в нем: ";
+	cin >> num;
+
+	cout << endl << "В диапазоне (от 2 до " << num << ") простыми числами являются: \n" << endl;
+	cout << 2 << endl;
+	for (int i = 2; (i <= num); i++)
+	{
+		for (int j = 2; j < i; j++)
+		if (i % j == 0) {
+			break;
+		}
+		else if (j + 1 == i) 
+		{ 
+			cout << i << endl;
+		}
+	}
 
 
+	//Это ко 2-ой проге ДЗ
+	// 
+	//Сортировка символов по умному, по-пацански - не повезло, не фартануло
+	// 
+    //string newStr = "";
+	
+	//cout << (int)str[0];
+	//cout << (int)str[1];
+	//cout << (int)str[2];
+
+	//for (int i = 1; i < (str.size()-1);)
+	//{
+	//	int k = (i - 1);
+		//string shortStr = "";
+		//shortStr = str;
+		//shortStr.erase(0, 1);
+  //cout << shortStr << endl;
+	
+	//	if (((int)str[k]) > ((int)str[i]))
+	//	{
+		//	newStr[k] = str[k];
+			//cout << newStr[k] << " 1";
+		//	i++;
+		//}
+		//else
+		//{
+		//	newStr[k] = str[i];
+	//		cout << newStr[k] << " 2";
+		//	i++;
+	//	}
+	//	cout << newStr << endl;
+	//}
+	
+		
 }
 
 // Запуск программы: CTRL+F5 или меню "Отладка" > "Запуск без отладки"
