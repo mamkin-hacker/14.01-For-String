@@ -16,6 +16,111 @@ int main()
 	SetConsoleOutputCP(1251);
 	SetConsoleCP(1251);
 	/* 
+	* 
+	* string name = "";
+
+	cout << "Первая программа ДЗ - *Вывод имени в шести падежах*\n";
+
+	cout << "Введи имя своего парня сюда: ";
+	cin >> name;
+	cout << endl;
+
+	cout << " Именительный падеж (Есть кто?):" << name << endl;
+
+	if (name == "Лев") {
+
+		name[1] = 'ь';
+
+		cout << " Родительный падеж (Нет кого?):" << (name + "а") << endl;
+
+		cout << " Дательный падеж (Рад кому?):" << (name + "у") << endl;
+
+		cout << " Винительный падеж (Вижу кого?):" << (name + "а") << endl;
+
+		cout << " Творительный падеж (Горжусь кем?):" << (name + "ом") << endl;
+
+		cout << " Предложный падеж (Мечтаю о ком?):" << (name + "е") << endl << endl;
+
+		cout << endl;
+
+	} else if (name == "Павел") {
+
+		name.erase(name.size() - 2, 1);
+
+		cout << " Родительный падеж (Нет кого?):" << (name + "а") << endl;
+
+		cout << " Дательный падеж (Рад кому?):" << (name + "у") << endl;
+
+		cout << " Винительный падеж (Вижу кого?):" << (name + "а") << endl;
+
+		cout << " Творительный падеж (Горжусь кем?):" << (name + "ом") << endl;
+
+		cout << " Предложный падеж (Мечтаю о ком?):" << (name + "е") << endl << endl;
+
+		cout << endl;
+
+	} 	else {
+		
+			string copyName = "";
+			copyName = name;
+			string changeName = "";
+		    changeName = copyName.erase(name.size() - 1, 1);
+
+			if  (name[name.size() - 1] == 'й' || name[name.size() - 1] == 'ь') {
+
+				changeName = name.erase(name.size() - 1, 1);
+
+				cout << " Родительный падеж (Нет кого?):" << (changeName + "я") << endl;
+
+				cout << " Дательный падеж (Рад кому?):" << (changeName + "ю") << endl;
+
+				cout << " Винительный падеж (Вижу кого?):" << (changeName + "я") << endl;
+
+				cout << " Творительный падеж (Горжусь кем?):" << (changeName + "ем") << endl;
+
+				if (name[name.size() - 1] == 'и') {
+				
+					cout << " Предложный падеж (Мечтаю о ком?):" << (changeName + "и") << endl;
+			
+				} else {
+			
+					cout << " Предложный падеж (Мечтаю о ком?):" << (changeName + "е") << endl;
+				}
+
+			} else if (name[name.size() - 1] == 'я') {
+
+				changeName = name.erase(name.size() - 1, 1);
+
+				cout << " Родительный падеж (Нет кого?):" << (changeName + "и") << endl;
+
+				cout << " Дательный падеж (Рад кому?):" << (changeName + "е") << endl;
+
+				cout << " Винительный падеж (Вижу кого?):" << (changeName + "ю") << endl;
+
+				cout << " Творительный падеж (Горжусь кем?):" << (changeName + "ей") << endl;
+
+				cout << " Предложный падеж (Мечтаю о ком?):" << (changeName + "е") << endl;
+
+				cout << endl;
+
+			} else {
+
+				cout << " Родительный падеж (Нет кого?):" << (name + "а") << endl;
+
+				cout << " Дательный падеж (Рад кому?):" << (name + "у") << endl;
+
+				cout << " Винительный падеж (Вижу кого?):" << (name + "а") << endl;
+
+				cout << " Творительный падеж (Горжусь кем?):" << (name + "ом") << endl;
+
+				cout << " Предложный падеж (Мечтаю о ком?):" << (name + "е") << endl << endl;
+
+				cout << endl;
+
+			}
+	}
+	* 
+	* 
 	string str = "";
 	
 	cout << "Вторая программа ДЗ - *Фильтр мата внутри фразы*\n" << endl;
